@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.scrollbar-track {
+	width: 8px;
+	height: 8px;
+	background: #343434 !important;
+}
+
+.scrollbar-thumb {
+	background: rgb(98, 98, 98) !important;
+}
+
+html,
+body {
+	height: 100vh;
+	font-family: 'Poppins';
+	background: rgb(24, 24, 24);
+}
+
+body {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.webgl {
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: none;
+	mix-blend-mode: exclusion;
+	opacity: 0;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+}
+
+.overlay h1 {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	text-align: center;
+	width: 100%;
+	transform: translate(-50%, -37.5%);
+	font-size: clamp(2rem, 5vw, 5rem);
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.overlay small {
+	font-size: clamp(1rem, 2vw, 3rem);
+	display: block;
+}
+
+.overlay h1:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	background: #000;
+	z-index: 20;
+	animation: widthAnim 1s ease forwards 1s;
+}
+
+.overlay h1:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0%;
+	height: 5px;
+	background: #000;
+	z-index: 20;
+	animation: widthAnim 1s ease forwards 1s;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: clamp(2rem, 7.5vw, 6rem);
+	text-transform: uppercase;
+	color: white;
+}
+
+h1 span {
+	display: inline-block;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+section {
+	height: 100vh;
+}
+
+@keyframes widthAnim {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 75%;
+	}
+}
+
+
+/*# sourceMappingURL=main.css.map*/
